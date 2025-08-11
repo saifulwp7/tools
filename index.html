@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>My Tools Website</title>
+<style>
+    /* Reset */
+    * {margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif;}
+
+    body {
+        background: #f5f7fa;
+        color: #333;
+    }
+
+    /* Header */
+    header {
+        background: #222;
+        color: #fff;
+        padding: 1rem 2rem;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        display: flex;
+        list-style: none;
+    }
+
+    nav ul li {
+        margin-left: 1.5rem;
+    }
+
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+        color: #4cc9f0;
+    }
+
+    /* Hero Section */
+    .hero {
+        background: linear-gradient(135deg, #4cc9f0, #4361ee);
+        color: #fff;
+        text-align: center;
+        padding: 4rem 2rem;
+    }
+
+    .hero h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+    }
+
+    .hero a {
+        background: #fff;
+        color: #4361ee;
+        padding: 0.75rem 1.5rem;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background 0.3s;
+    }
+
+    .hero a:hover {
+        background: #f0f0f0;
+    }
+
+    /* Tools Section */
+    .tools {
+        padding: 3rem 2rem;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .tools h3 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .tool-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .tool-card {
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        overflow: hidden;
+        transition: transform 0.3s, box-shadow 0.3s;
+        text-align: center;
+    }
+
+    .tool-card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+    }
+
+    .tool-card h4 {
+        padding: 1rem;
+        font-size: 1.2rem;
+        background: #f9f9f9;
+    }
+
+    .tool-card p {
+        padding: 0 1rem 1rem;
+        font-size: 0.95rem;
+        color: #555;
+    }
+
+    .tool-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    }
+
+    /* Footer */
+    footer {
+        background: #222;
+        color: #fff;
+        padding: 2rem;
+        text-align: center;
+    }
+
+    footer p {
+        margin-bottom: 0.5rem;
+    }
+
+    .social-icons a {
+        margin: 0 0.5rem;
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.2rem;
+        transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+        color: #4cc9f0;
+    }
+
+    /* Responsive Nav */
+    @media (max-width: 768px) {
+        nav ul {
+            flex-direction: column;
+            background: #222;
+            position: absolute;
+            top: 60px;
+            right: 0;
+            width: 200px;
+            display: none;
+        }
+
+        nav ul.active {
+            display: flex;
+        }
+
+        nav .menu-toggle {
+            display: block;
+            cursor: pointer;
+        }
+    }
+
+    @media (min-width: 769px) {
+        nav .menu-toggle {
+            display: none;
+        }
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>ToolsHub</h1>
+    <nav>
+        <div class="menu-toggle">☰</div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Image Tools</a></li>
+            <li><a href="#">PDF Tools</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Your All-in-One Image & PDF Toolkit</h2>
+    <p>Convert, compress, edit, and manage files — all in one place.</p>
+    <a href="#tools">Explore Tools</a>
+</section>
+
+<section class="tools" id="tools">
+    <h3>Popular Tools</h3>
+    <div class="tool-grid">
+        <div class="tool-card">
+            <img src="https://via.placeholder.com/400x180?text=Image+Compressor" alt="Image Compressor">
+            <h4>Image Compressor</h4>
+            <p>Reduce image size without losing quality.</p>
+        </div>
+        <div class="tool-card">
+            <img src="https://via.placeholder.com/400x180?text=PDF+Merger" alt="PDF Merger">
+            <h4>PDF Merger</h4>
+            <p>Combine multiple PDFs into one document.</p>
+        </div>
+        <div class="tool-card">
+            <img src="https://via.placeholder.com/400x180?text=Image+Converter" alt="Image Converter">
+            <h4>Image Converter</h4>
+            <p>Convert images between different formats.</p>
+        </div>
+        <div class="tool-card">
+            <img src="https://via.placeholder.com/400x180?text=PDF+Compressor" alt="PDF Compressor">
+            <h4>PDF Compressor</h4>
+            <p>Shrink your PDFs to save space and speed up sharing.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 ToolsHub. All rights reserved.</p>
+    <div class="social-icons">
+        <a href="#">🌐</a>
+        <a href="#">🐦</a>
+        <a href="#">📘</a>
+    </div>
+</footer>
+
+<script>
+    // Mobile Menu Toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('nav ul');
+
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+</script>
+
+</body>
+</html>
